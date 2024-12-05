@@ -1,14 +1,4 @@
 {
-  "version": 2,
-  "build": {
-    "env": {
-      "ANOTHER_VAR": "value"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/app.py"
-    }
-  ]
+    "build":{"src":"app.py","use":"@vercel/python"},
+    "routes":[{"src":"/(.*)","dest":"app.py"}]
 }
