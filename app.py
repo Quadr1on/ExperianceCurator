@@ -419,7 +419,7 @@ if __name__ == '__main__':
     # Initialize the database first
     # init_db()
 
-    
+    from os import environ
     # Then run the app
     app = create_app()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(environ.get("PORT", 5000)))
